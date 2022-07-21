@@ -80,11 +80,11 @@ class DriverController extends Controller
      * @param  \App\Models\Driver  $driver
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreDriverRequest $request, Driver $driver)
+    public function update(Request $request, Driver $driver)
     {
-
-        $driver->update($request->all());
-
+        $driver = Driver::find($request->id);
+        $driver->nome_completo = $request->nome_completo;
+        $driver->save();
         return response()->json([
             'status' => true,
             'message' => 'Motorista atualizado com sucesso!',
@@ -100,7 +100,7 @@ class DriverController extends Controller
      */
     public function destroy(Driver $driver)
     {
-        $driver->delete();
+        $driver->delete($driver->id);
         return response()->json([
             'status' => true,
             'message' => 'Motorista deletado!',

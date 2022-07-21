@@ -28,6 +28,11 @@ class StoreDriverRequest extends FormRequest
             "cnh" => "required",
             "tipo_cnh" => "required",
             "endereco" => "required",
+            "endereco" => "required",
+            "veiculo_marca" => "required",
+            "veiculo_modelo" => "required",
+            "veiculo_placa" => "required",
+            "veiculo_cor" => "required",
             "cidade" => "required",
             "estado" => "required",
         ];

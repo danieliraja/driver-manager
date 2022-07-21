@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('nome_completo');
             $table->bigInteger('cnh');
             $table->string('tipo_cnh');
+            $table->string('veiculo_marca');
+            $table->string('veiculo_modelo');
+            $table->string('veiculo_placa');
+            $table->string('veiculo_cor');
             $table->longText('endereco');
             $table->string('cidade');
             $table->string('estado');
